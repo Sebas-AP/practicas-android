@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp">
+    <!--Imagen del articulo-->
     <ImageView
         android:id="@+id/articleimg"
         android:layout_width="100dp"
@@ -17,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic"/>
-
+    <!--Titulo del articulo-->
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
@@ -33,6 +34,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/lorem"
         android:ellipsize="end"/>
+    <!--Descripcion del articulo-->
     <TextView
         android:id="@+id/artdesc"
         android:layout_width="0dp"

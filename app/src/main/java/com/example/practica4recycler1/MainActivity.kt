@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.practica4recycler1package.ArticleAdapter
 
 class MainActivity : AppCompatActivity() {
+    // UI components
     lateinit var img1: ImageView
     lateinit var txt1: EditText
     lateinit var txt2: EditText
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private var imageUri: Uri? = null
     private val articles = mutableListOf<Article>()
     private lateinit var adapter: ArticleAdapter
-
+    //metodo para elegir imagen
     private val pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         if (uri != null) {
             imageUri = uri
@@ -33,21 +34,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        //Inicializar componentes
         img1 = findViewById(R.id.img1)
         txt1 = findViewById(R.id.txt1)
         txt2 = findViewById(R.id.txt2)
         btn1 = findViewById(R.id.btn1)
         recyclerView = findViewById(R.id.reciclerview1)
-
+        // Configurar RecyclerView
         adapter = ArticleAdapter(articles)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
-
+        // Configurar listener de la imagen
         img1.setOnClickListener {
             pickImageLauncher.launch("image/*")
         }
-
+        // Configurar listener del botón
         btn1.setOnClickListener {
             val title = txt1.text.toString()
             val desc = txt2.text.toString()

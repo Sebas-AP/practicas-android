@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:backgroundTint="@color/purple">
-
+    <!--Imagen-->
     <ImageView
         android:id="@+id/img1"
         android:layout_width="120dp"
@@ -18,12 +18,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         />
+    <!--Contenedor de campos-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp"
         >
+        <!--Campo de titulo-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,6 +44,7 @@
                 android:layout_height="50dp"
                 />
         </LinearLayout>
+        <!--Campo de descripcion-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,6 +60,7 @@
                 android:layout_height="50dp"
                 android:layout_marginBottom="5dp"/>
         </LinearLayout>
+        <!--Boton de añadir-->
         <Button
             android:id="@+id/btn1"
             android:layout_width="wrap_content"
@@ -67,6 +71,7 @@
             android:textColor="@color/white"
             />
     </LinearLayout>
+    <!--Recycler view-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclerview1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
